@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acme Enterprise — Solutions for Growth</title>
+  <meta name="description" content="Acme Enterprise provides enterprise-grade software, consulting and managed services to accelerate business growth." />
+  <style>
+    /* Simple, modern styling */
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --accent:#0b74de;
+      --muted:#6b7280;
+      --radius:12px;
+      --maxw:1100px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0f1724;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef4fb);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+      line-height:1.45;
+    }
+    .site{
+      width:100%;
+      max-width:var(--maxw);
+      background:transparent;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 8px;
+      margin-bottom:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2bb2ff);
+      display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;
+      box-shadow:0 6px 18px rgba(11,116,222,0.12);
+    }
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+    .cta{
+      background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;
+      box-shadow:0 6px 18px rgba(11,116,222,0.12);
+    }
+
+    /* Hero */
+    .hero{
+      display:flex;
+      gap:var(--gap);
+      align-items:center;
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 10px 30px rgba(10,20,40,0.06);
+      margin-bottom:22px;
+    }
+    .hero-content{flex:1;min-width:220px}
+    h1{font-size:28px;margin:0 0 8px}
+    p.lead{margin:0;color:var(--muted)}
+    .hero-cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1.5px solid #e6eefb;color:var(--accent)}
+
+    .hero-illus{
+      width:320px;height:200px;background:linear-gradient(135deg,#fff,#f1f8ff);
+      border-radius:12px;display:flex;align-items:center;justify-content:center;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+      font-weight:700;color:var(--accent);
+    }
+
+    /* Services */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-bottom:20px;
+    }
+    .card{
+      background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 16px rgba(10,20,40,0.04);
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .muted{color:var(--muted);font-size:0.95rem}
+
+    /* About + Contact */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea{
+      padding:12px;border-radius:10px;border:1px solid #e6eefb;font-size:0.95rem;
+      background:transparent;resize:vertical
+    }
+    label{font-weight:600;font-size:0.9rem}
+    .footer{
+      margin-top:6px;padding:18px;text-align:center;color:var(--muted);font-size:0.95rem
+    }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+      .hero{flex-direction:column}
+      .hero-illus{width:100%;height:160px}
+    }
+    @media (max-width:520px){
+      body{padding:18px}
+      header{flex-direction:column;align-items:flex-start}
+      nav a{margin-left:8px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="site" role="main">
+    <header>
+      <a class="brand" href="#" aria-label="Acme Enterprise homepage">
+        <div class="logo">AE</div>
+        <div>
+          <div style="font-weight:800">Acme Enterprise</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Enterprise Solutions & Consulting</div>
+        </div>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get a Quote</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-content">
+        <h1>Enterprise software & consulting that scales with you</h1>
+        <p class="lead">We design secure, high-performance systems, streamline processes, and help teams deliver measurable results — from migration to ongoing support.</p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="scrollToSection('contact')">Request a Demo</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('services')">Our Services</button>
+        </div>
+
+        <div style="margin-top:14px;color:var(--muted);font-size:0.95rem">
+          Trusted by: <strong>RetailCo</strong>, <strong>FinGlobal</strong>, <strong>HealthPlus</strong>
+        </div>
+      </div>
+
+      <div class="hero-illus" aria-hidden="true">
+        <div>
+          <div style="font-size:22px">Business Platform</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">Secure • Scalable • Compliant</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading" style="margin:0 0 12px">Our core services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Custom Enterprise Software</h3>
+          <p class="muted">Design and build scalable web & backend platforms with secure architectures and APIs.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud Migration & DevOps</h3>
+          <p class="muted">Migrate to cloud, automate CI/CD, and optimize costs and reliability.</p>
+        </div>
+        <div class="card">
+          <h3>Data & Analytics</h3>
+          <p class="muted">Data engineering, dashboards, and ML insights that power decisions.</p>
+        </div>
+        <div class="card">
+          <h3>Security & Compliance</h3>
+          <p class="muted">Threat assessments, encryption, audits and compliance (SOC2, ISO27001).</p>
+        </div>
+        <div class="card">
+          <h3>Managed Services</h3>
+          <p class="muted">24/7 monitoring, incident response, and platform support.</p>
+        </div>
+        <div class="card">
+          <h3>Consulting & Strategy</h3>
+          <p class="muted">Roadmaps, technical due diligence, and transformation planning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col" aria-label="About and contact">
+      <div id="about" class="card" style="display:flex;flex-direction:column;justify-content:center">
+        <h2 style="margin-top:0">About Acme Enterprise</h2>
+        <p class="muted">We partner with mid-size and large organizations to deliver software and operational excellence. Our teams combine long-term engineering experience with practical business sense to ensure technology investments deliver measurable ROI.</p>
+        <ul class="muted" style="margin-top:10px">
+          <li>Founded: 2012</li>
+          <li>Offices: Bangalore • London • Toronto</li>
+          <li>Industries: Finance • Healthcare • Retail • SaaS</li>
+        </ul>
+      </div>
+
+      <div id="contact" class="card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" style="margin-top:0">Contact us</h2>
+        <form id="contactForm" onsubmit="return handleSubmit(event)" novalidate>
+          <div>
+            <label for="name">Full name</label><br />
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+          </div>
+          <div>
+            <label for="company">Company</label><br />
+            <input id="company" name="company" type="text" placeholder="Company name (optional)" />
+          </div>
+          <div>
+            <label for="email">Email</label><br />
+            <input id="email" name="email" type="email" required placeholder="name@company.com" />
+          </div>
+          <div>
+            <label for="message">Message</label><br />
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <button type="button" class="btn" onclick="resetForm()">Reset</button>
+          </div>
+          <div id="formStatus" style="color:var(--muted);font-size:0.95rem;margin-top:8px"></div>
+        </form>
+
+        <div style="margin-top:12px;color:var(--muted)">
+          <strong>Email:</strong> hello@acme-enterprise.com<br />
+          <strong>Phone:</strong> +91 80 1234 5678
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Acme Enterprise — Built for growth. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Basic helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function resetForm(){
+      const f = document.getElementById('contactForm');
+      f.reset();
+      document.getElementById('formStatus').textContent = '';
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('formStatus');
+
+      if(!name || !email || !message){
+        status.textContent = 'Please complete required fields.';
+        return false;
+      }
+
+      // Simple email format check
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if(!emailRe.test(email)){
+        status.textContent = 'Please enter a valid email address.';
+        return false;
+      }
+
+      // Normally you'd send this to your backend. Here we'll simulate success.
+      status.textContent = 'Sending…';
+      setTimeout(() => {
+        status.textContent = 'Thanks — your message was sent. We will contact you within 2 business days.';
+        document.getElementById('contactForm').reset();
+      }, 800);
+
+      return false;
+    }
+  </script>
+</body>
+</html>
